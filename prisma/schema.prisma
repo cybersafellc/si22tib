@@ -1,0 +1,66 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model user {
+  id        String   @id @default(uuid()) @db.VarChar(255)
+  username  String   @db.VarChar(255)
+  password  String   @db.VarChar(255)
+  nim       String   @db.VarChar(60)
+  nama      String   @db.VarChar(255)
+  whatsapp  String   @db.VarChar(60)
+  create_at DateTime @default(now())
+  update_at DateTime @updatedAt
+}
+
+model mata_kuliah {
+  id        String   @id @default(uuid()) @db.VarChar(255)
+  nama      String   @db.Text
+  sks       Int
+  dosen     String   @db.VarChar(255)
+  create_at DateTime @default(now())
+  update_at DateTime @updatedAt
+  jadwal_kuliah jadwal_kuliah[]
+  tugas     tugas[]
+  kelompok  kelompok[]
+}
+
+model jadwal_kuliah {
+  id              String     @id @default(uuid()) @db.VarChar(255)
+  mata_kuliah_id  String     @db.VarChar(255)
+  ruang           String     @db.VarChar(255)
+  hari            Int     
+  jam_masuk       DateTime   @db.Time
+  jam_keluar      DateTime   @db.Time
+  create_at       DateTime   @default(now())
+  update_at       DateTime   @updatedAt
+
+  mata_kuliah     mata_kuliah @relation(fields: [mata_kuliah_id], references: [id], onDelete: Cascade)
+}
+
+model tugas {
+  id              String     @id @default(uuid()) @db.VarChar(255)
+  mata_kuliah_id  String     @db.VarChar(255)
+  nama_tugas      String     @db.Text
+  deadline        DateTime
+  create_at       DateTime   @default(now())
+  update_at       DateTime   @updatedAt
+
+  mata_kuliah     mata_kuliah @relation(fields: [mata_kuliah_id], references: [id], onDelete: Cascade)
+}
+
+model kelompok {
+  id              String     @id @default(uuid()) @db.VarChar(255)
+  mata_kuliah_id  String     @db.VarChar(255)
+  nama            String     @db.VarChar(255)
+  anggota         String     @db.Text
+  create_at       DateTime   @default(now())
+  update_at       DateTime   @updatedAt
+
+  mata_kuliah     mata_kuliah @relation(fields: [mata_kuliah_id], references: [id], onDelete: Cascade)
+}
