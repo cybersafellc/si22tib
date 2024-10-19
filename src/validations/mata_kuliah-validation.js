@@ -11,4 +11,8 @@ const get = Joi.object({
   take: Joi.number().optional(),
 });
 
-export default { create, get };
+const getById = Joi.object({
+  id: Joi.string().required(),
+});
+
+export default { create, get, getById };

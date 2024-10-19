@@ -34,4 +34,23 @@ async function get(request) {
   return new Response(200, "list mata kuliah", response, null, false);
 }
 
-export default { create, get };
+async function getById(request) {
+  const result = await validation(mata_kuliahValidation.getById, request);
+  const response = await database.mata_kuliah.findUnique({
+    where: result,
+  });
+  if (!response)
+    throw new ResponseError(
+      400,
+      `tidak ada mata kuliah dengan id : ${result.id}`
+    );
+  return new Response(
+    200,
+    `mata kuliah dengan id : ${result.id}`,
+    response,
+    null,
+    false
+  );
+}
+
+export default { create, get, getById };

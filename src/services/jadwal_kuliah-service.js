@@ -47,14 +47,54 @@ async function create(request) {
 async function get(request) {
   const result = await validation(jadwal_kuliahValidation.get, request);
   result.page = (result.page - 1) * result.take;
-  const response = await database.jadwal_kuliah.findMany({
+  let response = await database.jadwal_kuliah.findMany({
     orderBy: {
-      hari: "desc",
+      hari: "asc",
     },
     skip: result.page,
     take: result.take,
   });
+  response = await Promise.all(
+    response.map(async (data) => {
+      data.mata_kuliah = await database.mata_kuliah.findUnique({
+        where: {
+          id: data.mata_kuliah_id,
+        },
+      });
+      data.mata_kuliah_id = undefined;
+      data.mata_kuliah.create_at = undefined;
+      data.mata_kuliah.update_at = undefined;
+      return data;
+    })
+  );
   return new Response(200, "list jadwal perkuliahan", response, null, false);
 }
 
-export default { create, get };
+async function getById(request) {
+  const result = await validation(jadwal_kuliahValidation.getById, request);
+  let response = await database.jadwal_kuliah.findUnique({
+    where: result,
+  });
+  if (!response)
+    throw new ResponseError(
+      400,
+      `tidak ada jadwal kuliah dengan id : ${result.id}`
+    );
+  response.mata_kuliah = await database.mata_kuliah.findUnique({
+    where: {
+      id: response.mata_kuliah_id,
+    },
+  });
+  response.mata_kuliah_id = undefined;
+  response.mata_kuliah.create_at = undefined;
+  response.mata_kuliah.update_at = undefined;
+  return new Response(
+    200,
+    `jadwal kuliah dengan id : ${result.id}`,
+    response,
+    null,
+    false
+  );
+}
+
+export default { create, get, getById };
