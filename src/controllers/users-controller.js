@@ -11,7 +11,10 @@ async function create(req, res, next) {
 
 async function login(req, res, next) {
   try {
-    const response = await usersService.login(req.body);
+    req.log = {};
+    req.log.ip_address = req.ip;
+    req.log.user_agent = req.headers["user-agent"];
+    const response = await usersService.login(req.body, req.log);
     res.status(response.status).json(response).end();
   } catch (error) {
     next(error);

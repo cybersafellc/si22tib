@@ -13,4 +13,9 @@ const login = Joi.object({
   password: Joi.string().required(),
 });
 
-export default { create, login };
+const loginInfoLogin = Joi.object({
+  ip_address: Joi.string().required(),
+  user_agent: Joi.string().required(),
+});
+
+export default { create, login, loginInfoLogin };
