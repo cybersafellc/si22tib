@@ -43,12 +43,15 @@ async function login(request, log) {
   });
   if (user && (await bcrypt.compare(result.password, user.password))) {
     //
-    const response = await fetch(`http://ip-api.com/json/`, {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-      },
-    });
+    const response = await fetch(
+      `http://ip-api.com/json/${resLog.ip_address}`,
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+        },
+      }
+    );
     const responseJson = await response.json();
     client
       .sendMessage(
