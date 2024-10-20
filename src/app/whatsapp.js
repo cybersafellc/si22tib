@@ -2,7 +2,11 @@ import { Client } from "whatsapp-web.js";
 import qrcode from "qrcode-terminal";
 import { logger } from "./logging.js";
 
-const client = new Client();
+const client = new Client({
+  puppeteer: {
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  },
+});
 
 client.on("qr", (qr) => {
   qrcode.generate(qr, { small: true });
