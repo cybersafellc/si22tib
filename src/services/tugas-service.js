@@ -7,6 +7,16 @@ import crypto from "crypto";
 
 async function create(request) {
   const result = await validation(tugasValidation.create, request);
+  const count0 = await database.mata_kuliah.count({
+    where: {
+      id: result.mata_kuliah_id,
+    },
+  });
+  if (!count0)
+    throw new ResponseError(
+      400,
+      `mata kuliah dengan id ${result.mata_kuliah_id} tidak ada!`
+    );
   const count = await database.tugas.findFirst({
     where: {
       mata_kuliah_id: result.mata_kuliah_id,

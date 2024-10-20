@@ -231,3 +231,63 @@
 {"level":"info","message":{"duration":0,"params":"[\"24917cdd-a801-4456-b652-db0fe630e05f\",1,0]","query":"SELECT `si22tib`.`tugas`.`id`, `si22tib`.`tugas`.`mata_kuliah_id`, `si22tib`.`tugas`.`nama_tugas`, `si22tib`.`tugas`.`deadline`, `si22tib`.`tugas`.`create_at`, `si22tib`.`tugas`.`update_at` FROM `si22tib`.`tugas` WHERE (`si22tib`.`tugas`.`id` = ? AND 1=1) LIMIT ? OFFSET ?","target":"quaint::connector::metrics","timestamp":"2024-10-20T13:03:42.878Z"},"timestamp":"2024-10-20T13:03:42.878Z"}
 {"level":"info","message":{"duration":0,"params":"[\"1d73b1b9-523b-4d8e-b01b-39eef6912cad\",1,0]","query":"SELECT `si22tib`.`mata_kuliah`.`id`, `si22tib`.`mata_kuliah`.`nama`, `si22tib`.`mata_kuliah`.`sks`, `si22tib`.`mata_kuliah`.`dosen` FROM `si22tib`.`mata_kuliah` WHERE (`si22tib`.`mata_kuliah`.`id` = ? AND 1=1) LIMIT ? OFFSET ?","target":"quaint::connector::metrics","timestamp":"2024-10-20T13:03:42.881Z"},"timestamp":"2024-10-20T13:03:42.881Z"}
 {"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:03:45.841Z"}
+{"level":"info","message":"server running","timestamp":"2024-10-20T13:03:56.385Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:04:02.392Z"}
+{"level":"info","message":"Starting a mysql pool with 13 connections.","target":"quaint::pooled","timestamp":"2024-10-20T13:04:02.556Z"}
+{"level":"info","message":{"duration":0,"params":"[\"24917cdd-a801-4456-b652-db0fe630e05f\",1,0]","query":"SELECT `si22tib`.`tugas`.`id`, `si22tib`.`tugas`.`mata_kuliah_id`, `si22tib`.`tugas`.`nama_tugas`, `si22tib`.`tugas`.`deadline`, `si22tib`.`tugas`.`create_at`, `si22tib`.`tugas`.`update_at` FROM `si22tib`.`tugas` WHERE (`si22tib`.`tugas`.`id` = ? AND 1=1) LIMIT ? OFFSET ?","target":"quaint::connector::metrics","timestamp":"2024-10-20T13:04:02.563Z"},"timestamp":"2024-10-20T13:04:02.564Z"}
+{"level":"info","message":{"duration":0,"params":"[\"1d73b1b9-523b-4d8e-b01b-39eef6912cad\",1,0]","query":"SELECT `si22tib`.`mata_kuliah`.`id`, `si22tib`.`mata_kuliah`.`nama`, `si22tib`.`mata_kuliah`.`sks`, `si22tib`.`mata_kuliah`.`dosen` FROM `si22tib`.`mata_kuliah` WHERE (`si22tib`.`mata_kuliah`.`id` = ? AND 1=1) LIMIT ? OFFSET ?","target":"quaint::connector::metrics","timestamp":"2024-10-20T13:04:02.566Z"},"timestamp":"2024-10-20T13:04:02.566Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:05:02.282Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:05:22.267Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:05:42.271Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:06:02.277Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:06:22.293Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:07:33.398Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:08:33.411Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:08:53.420Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:09:13.430Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:09:33.434Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:09:53.443Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:11:25.627Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:12:25.628Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:12:45.641Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:13:05.655Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:13:25.658Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:13:45.666Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:14:56.886Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:15:56.897Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:16:16.899Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:16:36.912Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:16:56.923Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:17:16.934Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:18:28.037Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:19:28.051Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:19:48.066Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:20:08.073Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:20:28.086Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:20:48.091Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:21:59.726Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:22:59.733Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:23:19.748Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:23:39.750Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:23:59.755Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:24:19.757Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:25:30.880Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:26:30.882Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:26:50.889Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:27:10.904Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:27:30.910Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:27:50.921Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:29:02.126Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:30:02.137Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:30:22.152Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:30:42.163Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:31:02.178Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:31:22.178Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:32:33.708Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:33:33.724Z"}
+{"level":"info","message":"server running","timestamp":"2024-10-20T13:33:36.745Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:33:42.164Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:34:42.057Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:35:02.043Z"}
+{"level":"info","message":"server running","timestamp":"2024-10-20T13:35:06.640Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-20T13:35:12.411Z"}
