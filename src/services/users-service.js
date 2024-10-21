@@ -90,4 +90,23 @@ Maps : https://www.google.com/maps/@${responseJson?.lat},${
   }
 }
 
-export default { create, login };
+async function get(request) {
+  const result = await validation(usersValidation.get, request);
+  const response = await database.user.findUnique({
+    where: {
+      id: result.user_id,
+    },
+    select: {
+      id: true,
+      username: true,
+      nim: true,
+      nama: true,
+      whatsapp: true,
+    },
+  });
+  if (!response)
+    throw new ResponseError(400, `username with id ${result.id} tidak ada`);
+  return new Response(200, "info profil", response, null, false);
+}
+
+export default { create, login, get };

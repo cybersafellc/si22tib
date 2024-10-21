@@ -21,4 +21,14 @@ async function login(req, res, next) {
   }
 }
 
-export default { create, login };
+async function get(req, res, next) {
+  try {
+    req.body.user_id = await req.id;
+    const response = await usersService.get(req.body);
+    res.status(response.status).json(response).end();
+  } catch (error) {
+    next(error);
+  }
+}
+
+export default { create, login, get };

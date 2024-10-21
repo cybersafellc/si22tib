@@ -18,4 +18,8 @@ const loginInfoLogin = Joi.object({
   user_agent: Joi.string().required(),
 });
 
-export default { create, login, loginInfoLogin };
+const get = Joi.object({
+  user_id: Joi.string().required(),
+});
+
+export default { create, login, loginInfoLogin, get };
