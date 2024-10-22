@@ -28,6 +28,15 @@ model mata_kuliah {
   jadwal_kuliah jadwal_kuliah[]
   tugas     tugas[]
   kelompok  kelompok[]
+  group_wa       group_wa[]
+}
+
+model group_wa {
+  id              String     @id @default(uuid()) @db.VarChar(255)
+  mata_kuliah_id  String     @db.VarChar(255)
+  pid             String?    @db.VarChar(255)
+
+  mata_kuliah     mata_kuliah @relation(fields: [mata_kuliah_id], references: [id], onDelete: Cascade)
 }
 
 model jadwal_kuliah {
@@ -64,3 +73,4 @@ model kelompok {
 
   mata_kuliah     mata_kuliah @relation(fields: [mata_kuliah_id], references: [id], onDelete: Cascade)
 }
+

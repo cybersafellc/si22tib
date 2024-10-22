@@ -172,3 +172,38 @@
 {"level":"info","message":{"duration":0,"params":"[10,0]","query":"SELECT `si22tib`.`jadwal_kuliah`.`id`, `si22tib`.`jadwal_kuliah`.`mata_kuliah_id`, `si22tib`.`jadwal_kuliah`.`ruang`, `si22tib`.`jadwal_kuliah`.`hari`, `si22tib`.`jadwal_kuliah`.`jam_masuk`, `si22tib`.`jadwal_kuliah`.`jam_keluar`, `si22tib`.`jadwal_kuliah`.`create_at`, `si22tib`.`jadwal_kuliah`.`update_at` FROM `si22tib`.`jadwal_kuliah` WHERE 1=1 ORDER BY `si22tib`.`jadwal_kuliah`.`hari` ASC LIMIT ? OFFSET ?","target":"quaint::connector::metrics","timestamp":"2024-10-21T17:23:20.528Z"},"timestamp":"2024-10-21T17:23:20.528Z"}
 {"level":"info","message":{"duration":0,"params":"[\"1d73b1b9-523b-4d8e-b01b-39eef6912cad\",1,0]","query":"SELECT `si22tib`.`mata_kuliah`.`id`, `si22tib`.`mata_kuliah`.`nama`, `si22tib`.`mata_kuliah`.`sks`, `si22tib`.`mata_kuliah`.`dosen`, `si22tib`.`mata_kuliah`.`create_at`, `si22tib`.`mata_kuliah`.`update_at` FROM `si22tib`.`mata_kuliah` WHERE (`si22tib`.`mata_kuliah`.`id` = ? AND 1=1) LIMIT ? OFFSET ?","target":"quaint::connector::metrics","timestamp":"2024-10-21T17:23:20.531Z"},"timestamp":"2024-10-21T17:23:20.531Z"}
 {"level":"info","message":"server running","timestamp":"2024-10-21T17:24:05.539Z"}
+{"level":"info","message":"server running","timestamp":"2024-10-21T22:44:46.554Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T22:44:53.965Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T22:45:26.278Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T22:45:30.156Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T22:45:30.181Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T22:46:30.059Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T22:46:30.064Z"}
+{"level":"info","message":"server running","timestamp":"2024-10-21T23:15:55.253Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T23:16:02.042Z"}
+{"level":"info","message":"Starting a mysql pool with 13 connections.","target":"quaint::pooled","timestamp":"2024-10-21T23:16:06.913Z"}
+{"level":"info","message":{"duration":1,"params":"[]","query":"SELECT `si22tib`.`group_wa`.`id`, `si22tib`.`group_wa`.`mata_kuliah_id`, `si22tib`.`group_wa`.`pid` FROM `si22tib`.`group_wa` WHERE 1=1","target":"quaint::connector::metrics","timestamp":"2024-10-21T23:16:06.923Z"},"timestamp":"2024-10-21T23:16:06.924Z"}
+{"level":"error","message":"Promise.all is not a constructor","timestamp":"2024-10-21T23:16:06.928Z"}
+{"level":"info","message":"server running","timestamp":"2024-10-21T23:16:18.592Z"}
+{"level":"info","message":"Starting a mysql pool with 13 connections.","target":"quaint::pooled","timestamp":"2024-10-21T23:16:19.728Z"}
+{"level":"info","message":{"duration":0,"params":"[]","query":"SELECT `si22tib`.`group_wa`.`id`, `si22tib`.`group_wa`.`mata_kuliah_id`, `si22tib`.`group_wa`.`pid` FROM `si22tib`.`group_wa` WHERE 1=1","target":"quaint::connector::metrics","timestamp":"2024-10-21T23:16:19.734Z"},"timestamp":"2024-10-21T23:16:19.734Z"}
+{"level":"info","message":{"duration":0,"params":"[]","query":"SELECT `si22tib`.`group_wa`.`id`, `si22tib`.`group_wa`.`mata_kuliah_id`, `si22tib`.`group_wa`.`pid` FROM `si22tib`.`group_wa` WHERE 1=1","target":"quaint::connector::metrics","timestamp":"2024-10-21T23:16:21.188Z"},"timestamp":"2024-10-21T23:16:21.188Z"}
+{"level":"info","message":{"duration":0,"params":"[]","query":"SELECT `si22tib`.`group_wa`.`id`, `si22tib`.`group_wa`.`mata_kuliah_id`, `si22tib`.`group_wa`.`pid` FROM `si22tib`.`group_wa` WHERE 1=1","target":"quaint::connector::metrics","timestamp":"2024-10-21T23:16:21.564Z"},"timestamp":"2024-10-21T23:16:21.564Z"}
+{"level":"info","message":{"duration":0,"params":"[]","query":"SELECT `si22tib`.`group_wa`.`id`, `si22tib`.`group_wa`.`mata_kuliah_id`, `si22tib`.`group_wa`.`pid` FROM `si22tib`.`group_wa` WHERE 1=1","target":"quaint::connector::metrics","timestamp":"2024-10-21T23:16:21.742Z"},"timestamp":"2024-10-21T23:16:21.742Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T23:16:24.478Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T23:17:24.380Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T23:17:44.377Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T23:18:04.392Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T23:18:24.401Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T23:18:44.407Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T23:19:55.628Z"}
+{"level":"info","message":"server running","timestamp":"2024-10-21T23:20:17.752Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T23:20:23.248Z"}
+{"level":"info","message":"server running","timestamp":"2024-10-21T23:20:55.563Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T23:21:01.952Z"}
+{"level":"info","message":"server running","timestamp":"2024-10-21T23:21:55.984Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T23:22:02.434Z"}
+{"level":"info","message":"server running","timestamp":"2024-10-21T23:22:07.262Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T23:22:13.604Z"}
+{"level":"info","message":"server running","timestamp":"2024-10-21T23:22:58.250Z"}
+{"level":"info","message":"Scan QR code di atas untuk login ke WhatsApp","timestamp":"2024-10-21T23:23:04.269Z"}

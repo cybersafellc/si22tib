@@ -1,5 +1,7 @@
 import { database } from "../app/database.js";
+import { logger } from "../app/logging.js";
 import { Response } from "../app/response.js";
+import { client } from "../app/whatsapp.js";
 import { ResponseError } from "../errors/response-error.js";
 import tugasValidation from "../validations/tugas-validation.js";
 import { validation } from "../validations/validation.js";
@@ -27,6 +29,23 @@ async function create(request) {
   result.id = crypto.randomUUID();
   const response = await database.tugas.create({
     data: result,
+  });
+  const users = await database.user.findMany();
+  users.map((user) => {
+    try {
+      client.sendMessage(
+        `62${user.whatsapp}@c.us`,
+        `
+Hello ${user.nama},
+Admin baru saja menambahkan List Tugas Terbaru
+
+Silahkan cek di sistem kita
+https://sisfo.htp22tib.com
+`
+      );
+    } catch (error) {
+      logger.error(error.message);
+    }
   });
   return new Response(200, "berhasil menambahkan tugas", response, null, false);
 }

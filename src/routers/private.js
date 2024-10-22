@@ -5,6 +5,7 @@ import jadwal_kuliahController from "../controllers/jadwal_kuliah-controller.js"
 import tugasController from "../controllers/tugas-controller.js";
 import kelompokController from "../controllers/kelompok-controller.js";
 import usersController from "../controllers/users-controller.js";
+import group_waControllers from "../controllers/group_wa-controllers.js";
 
 const router = express.Router();
 router.get("/users", authMiddleware.user, usersController.get);
@@ -18,4 +19,7 @@ router.post("/tugas", authMiddleware.user, tugasController.create);
 router.delete("/tugas", authMiddleware.user, tugasController.deletes);
 router.post("/kelompok", authMiddleware.user, kelompokController.create);
 router.delete("/kelompok", authMiddleware.user, kelompokController.deletes);
+
+router.get("/group_id", authMiddleware.user, group_waControllers.getGroupId);
+router.post("/group_wa", authMiddleware.user, group_waControllers.create);
 export default router;

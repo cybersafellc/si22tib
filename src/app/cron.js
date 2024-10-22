@@ -90,10 +90,12 @@ async function checkJadwalKuliah() {
 
     // Perbandingan jam dan menit secara manual
     const isWithinTimeRange =
-      (jamMasukHour > currentHour ||
+      (jamMasukHour === nextHour && jamMasukMinute === 0) ||
+      (jamMasukHour === nextHour && jamMasukMinute === 30) || // Tambahkan logika untuk mendeteksi batas waktu tepat pada jam berikutnya
+      ((jamMasukHour > currentHour ||
         (jamMasukHour === currentHour && jamMasukMinute >= currentMinute)) &&
-      (jamMasukHour < nextHour ||
-        (jamMasukHour === nextHour && jamMasukMinute < nextMinute));
+        (jamMasukHour < nextHour ||
+          (jamMasukHour === nextHour && jamMasukMinute < nextMinute)));
 
     return isWithinTimeRange;
   });
