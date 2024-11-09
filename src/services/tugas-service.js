@@ -31,22 +31,24 @@ async function create(request) {
     data: result,
   });
   const users = await database.user.findMany();
-  users.map((user) => {
-    try {
-      client.sendMessage(
-        `62${user.whatsapp}@c.us`,
-        `
+  await Promise.all(
+    users.map(async (user) => {
+      try {
+        await client.sendMessage(
+          `62${user.whatsapp}@c.us`,
+          `
 Hello ${user.nama},
 Admin baru saja menambahkan List Tugas Terbaru
 
 Silahkan cek di sistem kita
 https://sisfo.htp22tib.com
 `
-      );
-    } catch (error) {
-      logger.error(error.message);
-    }
-  });
+        );
+      } catch (error) {
+        logger.error(error.message);
+      }
+    })
+  );
   return new Response(200, "berhasil menambahkan tugas", response, null, false);
 }
 

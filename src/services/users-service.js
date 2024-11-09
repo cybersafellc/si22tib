@@ -109,4 +109,17 @@ async function get(request) {
   return new Response(200, "info profil", response, null, false);
 }
 
-export default { create, login, get };
+async function verifyToken(request) {
+  const result = await validation(usersValidation.verifyToken, request);
+  const count = await database.user.count({
+    where: result,
+  });
+  if (!count)
+    throw new ResponseError(
+      400,
+      "this users maybe admin deleted, or your account locked!"
+    );
+  return new Response(200, "token verified", null, null, false);
+}
+
+export default { create, login, get, verifyToken };

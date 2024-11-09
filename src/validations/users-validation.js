@@ -22,4 +22,8 @@ const get = Joi.object({
   user_id: Joi.string().required(),
 });
 
-export default { create, login, loginInfoLogin, get };
+const verifyToken = Joi.object({
+  id: Joi.string().required(),
+});
+
+export default { create, login, loginInfoLogin, get, verifyToken };

@@ -31,4 +31,14 @@ async function get(req, res, next) {
   }
 }
 
-export default { create, login, get };
+async function verifyToken(req, res, next) {
+  try {
+    req.body.id = await req.id;
+    const response = await usersService.verifyToken(req.body);
+    res.status(response.status).json(response).end();
+  } catch (error) {
+    next(error);
+  }
+}
+
+export default { create, login, get, verifyToken };

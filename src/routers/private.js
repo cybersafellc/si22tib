@@ -9,6 +9,11 @@ import group_waControllers from "../controllers/group_wa-controllers.js";
 
 const router = express.Router();
 router.get("/users", authMiddleware.user, usersController.get);
+router.get(
+  "/users/verify-token",
+  authMiddleware.user,
+  usersController.verifyToken
+);
 router.post("/mata_kuliah", authMiddleware.user, mata_kuliahController.create);
 router.post(
   "/jadwal_kuliah",
